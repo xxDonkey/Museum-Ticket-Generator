@@ -1,0 +1,52 @@
+#age {
+    width: 30px;
+    text-align: center;
+}
+
+#coupon {
+    width: 80px;
+    text-align: center;
+}
+
+#coupon_l {
+    padding-left: 15px;
+}
+
+#override_l {
+    padding-left: 15px;
+}
+
+#day {
+    text-align: center;
+}
+
+#day_l {
+    padding-left: 15px;
+}
+
+#ui1 {
+    padding: 10px;
+    text-align: center;
+}
+
+#ui2 {
+    padding: 10px;
+    text-align: center;
+}
+
+button {
+    width: 150px;
+    height: 20px;
+}
+
+#price {
+    text-align: center;
+    font-size: 40px;
+}
+
+#settings {
+    position: fixed;
+    top: 50%;
+    width: 400px;
+    height: 300px;
+}

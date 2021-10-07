@@ -8,7 +8,36 @@
     <link rel="stylesheet" href="main.css">
     <title>Museum Ticket Generator</title>
 </head>
-<body>
-    
+<body onload="on_body_loaded()">
+    <div id="ui1">
+        <label id="age_l">Age:</label>
+        <input type="text" id="age" value="18">
+
+        <label id="coupon_l">Coupon Code:</label>
+        <input type="text" id="coupon" value="">
+
+        <label id="override_l">Override Day of the Week</label>
+        <input type="checkbox" id="override">
+
+        <labe id="day_l"l>Day of the Week</label>
+        <select name="day" id="day">
+            <option value="0">Sunday</option>
+            <option value="1">Monday</option>
+            <option value="2">Tuesday</option>
+            <option value="3">wednesday</option>
+            <option value="4">Thursday</option>
+            <option value="5">Friday</option>
+            <option value="6">Saturday</option>
+        </select>
+    </div>
+    <div id="ui2">
+        <button id="compute" type="button" onClick="compute()">Compute Price</button>
+    </div>
+
+    <div id="output">
+        <p id="price">$35</p>
+    </div>
+
+    <textarea id="settings"></textarea>
 </body>
 </html>
