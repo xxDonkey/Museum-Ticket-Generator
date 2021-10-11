@@ -52,8 +52,32 @@ function compute()
     document.getElementById("price").innerHTML = "$" + price
 }
 
-function on_body_loaded()
+function onload()
 {
-    var settings_area = document.getElementById("settings")
-    settings_area.value = JSON.stringify(settings, null, 2)
+    var tr = document.getElementById("table_values")
+    var discounts = settings["daily-discounts"]
+
+    for (var i = 0; i < discounts.length; i++)
+    {
+        var td = document.createElement("td")
+        td.innerHTML = discounts[i]
+
+        tr.appendChild(td)
+    }
+}
+
+function toggle_mode()
+{
+    var generator = document.getElementById("generator")
+    var discounts = document.getElementById("discounts")
+    var button = document.getElementById("switch_mode")
+
+    if (generator.hidden)
+        button.innerText = "Show Discounts"
+
+    else 
+        button.innerText = "Show Generator"
+
+    generator.hidden = !generator.hidden
+    discounts.hidden = !discounts.hidden
 }
