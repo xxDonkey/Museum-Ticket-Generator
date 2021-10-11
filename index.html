@@ -6,38 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="main.js"></script>
     <link rel="stylesheet" href="main.css">
-    <title>Museum Ticket Generator</title>
+    <title>American Museum of Natural History Ticket Generator</title>
 </head>
-<body onload="on_body_loaded()">
-    <div id="ui1">
-        <label id="age_l">Age:</label>
-        <input type="text" id="age" value="18">
-
-        <label id="coupon_l">Coupon Code:</label>
-        <input type="text" id="coupon" value="">
-
-        <label id="override_l">Override Day of the Week</label>
-        <input type="checkbox" id="override">
-
-        <labe id="day_l"l>Day of the Week</label>
-        <select name="day" id="day">
-            <option value="0">Sunday</option>
-            <option value="1">Monday</option>
-            <option value="2">Tuesday</option>
-            <option value="3">wednesday</option>
-            <option value="4">Thursday</option>
-            <option value="5">Friday</option>
-            <option value="6">Saturday</option>
-        </select>
-    </div>
-    <div id="ui2">
-        <button id="compute" type="button" onClick="compute()">Compute Price</button>
+<body onload="onload()">
+    <div id="banner">
+        <img id="logo" src='https://media.segd.org/s3fs-public/AMNH-logo.png' width="50" height="50">
+        <a id="name" href="https://www.amnh.org/">American Museum of Natural History</a>
+        <button id="switch_mode" onClick="toggle_mode()">Show Discounts</button>
+        <a id="github" href="https://github.com/xxDonkey/Museum-Ticket-Generator">Github</a>
     </div>
 
-    <div id="output">
-        <p id="price">$35</p>
+    <div id="generator">
+        <div id="ui1">
+            <h2>Price Generator</h2>
+            <label id="age_l">Age:</label>
+            <input type="text" id="age" value="18">
+
+            <label id="coupon_l">Coupon Code:</label>
+            <input type="text" id="coupon" value="">
+
+            <label id="override_l">Override Day of the Week</label>
+            <input type="checkbox" id="override">
+
+            <labe id="day_l"l>Day of the Week</label>
+            <select name="day" id="day">
+                <option value="0">Sunday</option>
+                <option value="1">Monday</option>
+                <option value="2">Tuesday</option>
+                <option value="3">wednesday</option>
+                <option value="4">Thursday</option>
+                <option value="5">Friday</option>
+                <option value="6">Saturday</option>
+            </select>
+        </div>
+        <div id="ui2">
+            <button id="compute" type="button" onClick="compute()">Compute Price</button>
+        </div>
+
+        <div id="output">
+            <p id="price">$35</p>
+        </div>
     </div>
 
-    <textarea id="settings"></textarea>
+    <div id="discounts" hidden>
+        <h2>Discount Information</h2>
+        <!-- Daily discounts -->
+        <table>
+            <tr>
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+            </tr>
+            <tr id="table_values">
+                <!-- auto-generated -->
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
