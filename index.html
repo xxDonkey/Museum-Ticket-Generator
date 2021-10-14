@@ -9,21 +9,25 @@
     <title>American Museum of Natural History Ticket Generator</title>
 </head>
 <body onload="onload()">
-    <div id="banner">
-        <img id="logo" src='https://media.segd.org/s3fs-public/AMNH-logo.png' width="50" height="50">
-        <a id="name" href="https://www.amnh.org/">American Museum of Natural History</a>
-        <button id="switch_mode" onClick="toggle_mode()">Show Discounts</button>
-        <a id="github" href="https://github.com/xxDonkey/Museum-Ticket-Generator">Github</a>
+    <div class="banner">
+        <div class="banner">
+            <img id="logo" src='https://media.segd.org/s3fs-public/AMNH-logo.png' width="50" height="50">
+            <a id="name" href="https://www.amnh.org/">American Museum of Natural History</a>
+        </div>
+        <div class="banner" id="right">
+            <button id="switch_mode" onClick="toggle_mode()">Show Discounts</button>
+            <a id="github" href="https://github.com/xxDonkey/Museum-Ticket-Generator">Github</a>
+        </div>
     </div>
 
-    <div id="generator">
+    <div class="main" id="generator">
         <div id="ui1">
-            <h2>Price Generator</h2>
+            <h2 class="header">Price Generator</h2>
             <label id="age_l">Age:</label>
             <input type="text" id="age" value="18">
 
             <label id="coupon_l">Coupon Code:</label>
-            <input type="text" id="coupon" value="">
+            <input type="text" id="coupon" value=""><br>
 
             <label id="override_l">Override Day of the Week</label>
             <input type="checkbox" id="override">
@@ -48,9 +52,20 @@
         </div>
     </div>
 
-    <div id="discounts" hidden>
-        <h2>Discount Information</h2>
+    <div class="main" id="discounts" hidden>
+        <h2 class="header">Discount Information</h2>
+
+        <!-- Base/weekend prices -->
+        <p class="reg" id="prices_label"></p>
+
+        <!-- The coupon code -->
+        <p class="reg" id="coupon_label"></p>
+
+        <!-- Age discounts -->
+        <p class="reg" id="ages_label"></p>
+
         <!-- Daily discounts -->
+        <p>Daily Discounts</p>
         <table>
             <tr>
                 <th>Sunday</th>

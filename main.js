@@ -54,6 +54,15 @@ function compute()
 
 function onload()
 {
+    var prices = document.getElementById("prices_label")
+    var coupon = document.getElementById("coupon_label")
+    var ages = document.getElementById("ages_label")
+
+    prices.innerHTML = "Base price: $" + settings["base-price"] + "<br>Weekend price: $" + settings["weekend-price"]
+    coupon.innerHTML = "The coupon code is \"" + settings["coupon"][0] + "\" for $" + settings["coupon"][1]
+    ages.innerHTML = "If you are below " + settings["age-below-discount"][0] + " years old you get $" + settings["age-below-discount"][1] + " off"
+    ages.innerHTML += "<br>If you are above " + settings["age-above-discount"][0] + " years old you get $" + settings["age-above-discount"][1] + " off"
+    
     var tr = document.getElementById("table_values")
     var discounts = settings["daily-discounts"]
 
@@ -73,7 +82,7 @@ function toggle_mode()
     var button = document.getElementById("switch_mode")
 
     if (generator.hidden)
-        button.innerText = "Show Discounts"
+        button.innerText = "Show Discounts  "
 
     else 
         button.innerText = "Show Generator"
