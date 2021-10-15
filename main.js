@@ -4,10 +4,10 @@ var settings =
     "weekend-price" : 35,
     "daily-discounts": [
         0, // Sunday
-        5, // Monday
-        0, // Tuesday
+        0, // Monday
+        5, // Tuesday
         0, // Wednesday
-        0, // Thursday
+        5, // Thursday
         0, // Friday
         0  // Saturday
     ],
