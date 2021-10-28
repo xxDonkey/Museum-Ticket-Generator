@@ -14,7 +14,7 @@ var settings =
     ],
     "age-below-discount": [5, 5],
     "age-above-discount": [65, 5],
-    "tyler sucks at val": ["code", 5]
+    "coupon": ["tyler sucks at val", 5]
 }
 
 // Returns the computed price given the age, coupon_code, and the day
